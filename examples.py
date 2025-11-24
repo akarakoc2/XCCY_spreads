@@ -15,26 +15,6 @@ from src.data import DataLoader, DataProcessor, DataExporter
 from src.visualization import SpreadPlotter, OASCurvePlotter, Dashboard
 
 
-def example_1_basic_spread_calculation():
-    """Example 1: Basic spread calculation"""
-    print("\n" + "="*60)
-    print("EXAMPLE 1: Basic Spread Calculation")
-    print("="*60)
-    
-    calculator = SpreadCalculator()
-    pair = CurrencyPair("USD", "EUR")
-    
-    spread = calculator.calculate_spread(
-        currency_pair=pair,
-        forward_rate=1.12,
-        spot_rate=1.10,
-        time_period=1.0
-    )
-    
-    print(f"\nCurrency Pair: {pair}")
-    print(f"Spread: {spread.spread:.6f}")
-    print(f"Basis Points: {spread.basis_points:.2f} bps")
-
 
 def example_2_oas_curve_fitting():
     """Example 2: OAS curve fitting with synthetic data"""
@@ -165,7 +145,6 @@ def run_all_examples():
     print("="*60)
     
     try:
-        example_1_basic_spread_calculation()
         example_2_oas_curve_fitting()
         example_3_time_series_analysis()
         example_4_multi_currency_comparison()

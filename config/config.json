@@ -24,7 +24,7 @@
         }
     },
     "visualization": {
-        "default_style": "seaborn-v0_8-darkgrid",
+        "default_style": "classic",
         "figure_size": [16, 7],
         "dpi": 300,
         "colors": {

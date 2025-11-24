@@ -18,7 +18,7 @@ class OASCurvePlotter:
     Specialized plotter for OAS spread curves with Bloomberg NIA-style fitting.
     """
     
-    def __init__(self, style: str = 'seaborn-v0_8-darkgrid'):
+    def __init__(self, style: str = 'classic'):
         """
         Initialize the OAS curve plotter.
         
