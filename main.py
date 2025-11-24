@@ -1,1 +1,1 @@
-"print('Hello from Python on GitHub!')" 
+"print('Hello from Python')" 
