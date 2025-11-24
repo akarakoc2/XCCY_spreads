@@ -1,0 +1,44 @@
+{
+    "application": {
+        "name": "XCCY Spreads Analyzer",
+        "version": "1.0.0",
+        "description": "Cross-Currency Spread Analysis Tool with OAS Curve Fitting"
+    },
+    "data": {
+        "default_input_file": "Data.xlsx",
+        "output_directory": "output",
+        "date_format": "%Y-%m-%d"
+    },
+    "oas_analysis": {
+        "max_oas_filter": 150,
+        "min_duration_filter": 1,
+        "curve_fitting_method": "nelson_siegel_svensson",
+        "nss_parameters": {
+            "initial_beta0": null,
+            "initial_beta1": -50,
+            "initial_beta2": 50,
+            "initial_beta3": 0,
+            "initial_tau1": 2.0,
+            "initial_tau2": 5.0,
+            "max_iterations": 10000
+        }
+    },
+    "visualization": {
+        "default_style": "seaborn-v0_8-darkgrid",
+        "figure_size": [12, 7],
+        "dpi": 300,
+        "colors": {
+            "scatter": "#1f77b4",
+            "fit_curve": "#d62728",
+            "pchip": "#2ca02c"
+        },
+        "save_plots": true,
+        "show_statistics": true
+    },
+    "plotting": {
+        "scatter_point_size": 60,
+        "scatter_alpha": 0.8,
+        "line_width": 2.5,
+        "grid_alpha": 0.4
+    }
+}
