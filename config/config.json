@@ -5,7 +5,7 @@
         "description": "Cross-Currency Spread Analysis Tool with OAS Curve Fitting"
     },
     "data": {
-        "default_input_file": "Data.xlsx",
+        "default_input_file": "Data_VW_Sr.xlsx",
         "output_directory": "output",
         "date_format": "%Y-%m-%d"
     },
