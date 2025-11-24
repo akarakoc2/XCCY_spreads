@@ -10,7 +10,7 @@
         "date_format": "%Y-%m-%d"
     },
     "oas_analysis": {
-        "max_oas_filter": 150,
+        "max_oas_filter": 120,
         "min_duration_filter": 1,
         "curve_fitting_method": "nelson_siegel_svensson",
         "nss_parameters": {
@@ -25,7 +25,7 @@
     },
     "visualization": {
         "default_style": "seaborn-v0_8-darkgrid",
-        "figure_size": [12, 7],
+        "figure_size": [16, 7],
         "dpi": 300,
         "colors": {
             "scatter": "#1f77b4",
@@ -36,9 +36,9 @@
         "show_statistics": true
     },
     "plotting": {
-        "scatter_point_size": 60,
+        "scatter_point_size": 50,
         "scatter_alpha": 0.8,
-        "line_width": 2.5,
+        "line_width": 2,
         "grid_alpha": 0.4
     }
 }

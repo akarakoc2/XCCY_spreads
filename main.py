@@ -7,7 +7,7 @@ Nelson-Siegel-Svensson curve fitting.
 
 import pandas as pd
 import numpy as np
-
+import matplotlib.pyplot as plt
 # Import modular components
 from src.data import DataLoader
 from src.visualization import OASCurvePlotter
@@ -36,14 +36,14 @@ fig = plotter.plot_oas_curve_with_nss(
     durations=durations,
     oas_values=oas_values,
     title='OAS Spread Curve - Nelson-Siegel-Svensson Fit',
-    filter_params={'max_oas': 150, 'min_duration': 1},
+    filter_params={'max_oas': 120, 'min_duration': 1},
     save_path='output/oas_curve_nss.png',
     show_stats=True
 )
 
 # Add overall title
-import matplotlib.pyplot as plt
-plt.suptitle('OAS Spread Curve with Bloomberg NIA-Style Fitting', fontsize=16, y=0.98)
+
+plt.suptitle('OAS Spread Curve with Bloomberg NIA-Style Fitting', fontsize=12, y=0.98)
 
 print("\n" + "="*60)
 print("✓ Analysis completed!")
