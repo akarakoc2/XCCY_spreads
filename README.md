@@ -100,29 +100,7 @@ fig = plotter.plot_oas_curve_with_nss(
 plotter.show()
 ```
 
-### 2. Spread Calculations
-
-```python
-from src.engine import SpreadCalculator, CurrencyPair
-
-# Initialize calculator
-calculator = SpreadCalculator()
-
-# Create currency pair
-pair = CurrencyPair("USD", "EUR")
-
-# Calculate spread
-spread = calculator.calculate_spread(
-    currency_pair=pair,
-    forward_rate=1.12,
-    spot_rate=1.10,
-    time_period=1.0
-)
-
-print(f"Spread: {spread.basis_points:.2f} bps")
-```
-
-### 3. Data Processing
+### 2. Data Processing
 
 ```python
 from src.data import DataProcessor
@@ -141,7 +119,7 @@ df_resampled = processor.resample_timeseries(
 )
 ```
 
-### 4. Custom Visualizations
+### 3. Custom Visualizations
 
 ```python
 from src.visualization import SpreadPlotter
@@ -212,7 +190,6 @@ This model is used by Bloomberg for their NIA curves and provides smooth, econom
 ## 📦 Module Overview
 
 ### Engine Module
-- `SpreadCalculator`: Core calculation engine for XCCY spreads
 - `NelsonSiegelSvensson`: NSS curve fitting implementation
 - `CurveFitter`: Additional curve fitting methods (PCHIP, etc.)
 - `CurrencyPair` & `SpreadData`: Data models

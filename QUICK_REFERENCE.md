@@ -16,13 +16,6 @@ python examples.py
 
 ### Engine Module - Calculations
 ```python
-# Spread calculations
-from src.engine import SpreadCalculator, CurrencyPair, SpreadData
-
-calculator = SpreadCalculator()
-pair = CurrencyPair("USD", "EUR")
-spread = calculator.calculate_spread(pair, forward_rate=1.12, spot_rate=1.10, time_period=1.0)
-
 # Curve fitting
 from src.engine import NelsonSiegelSvensson, CurveFitter
 
@@ -137,40 +130,6 @@ plotter.plot_time_series(
     df, x_column='date',
     y_columns=['spread', 'ma7', 'ma30'],
     save_path='output/spread_analysis.png'
-)
-plotter.show()
-```
-
-### 3. Cross-Currency Comparison
-```python
-from src.engine import SpreadCalculator, CurrencyPair
-from src.visualization import SpreadPlotter
-
-calculator = SpreadCalculator()
-
-# Calculate multiple spreads
-pairs = [
-    CurrencyPair("USD", "EUR"),
-    CurrencyPair("USD", "GBP"),
-    CurrencyPair("USD", "JPY")
-]
-
-spreads_data = []
-for pair in pairs:
-    spread = calculator.calculate_spread(
-        pair, forward_rate=..., spot_rate=..., time_period=1.0
-    )
-    spreads_data.append({
-        'pair': str(pair),
-        'spread_bps': spread.basis_points
-    })
-
-df = pd.DataFrame(spreads_data)
-
-# Plot comparison
-plotter = SpreadPlotter()
-plotter.plot_spread_comparison(
-    df, category_column='pair', value_column='spread_bps'
 )
 plotter.show()
 ```

@@ -10,7 +10,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 # Import toolkit components
-from src.engine import SpreadCalculator, CurrencyPair, NelsonSiegelSvensson
+from src.engine import CurrencyPair, NelsonSiegelSvensson
 from src.data import DataLoader, DataProcessor, DataExporter
 from src.visualization import SpreadPlotter, OASCurvePlotter, Dashboard
 
